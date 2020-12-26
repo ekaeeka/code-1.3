@@ -2,7 +2,7 @@
 $host = 'localhost';
 $db = 'jopa';
 $user = 'root';
-$pass = 'root';
+$pass = '';
 $charset = 'utf8';;
 
 try {
@@ -13,7 +13,7 @@ try {
         PDO::ATTR_EMULATE_PREPARES => false,
     ];
 
-    $pdo = new PDO($dsn, $user, $pass, $opt);
+    $link = new PDO($dsn, $user, $pass, $opt);
 } catch (PDOException $e) {
     die('Подключение не удалось: ' . $e->getMessage());
 }
